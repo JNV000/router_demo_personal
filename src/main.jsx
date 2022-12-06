@@ -1,12 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 // import App from "./App";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import "./index.css";
+
+import Root from "./routes/root";
+/*
 import Contact from "./routes/Contact";
 import Error from "./routes/Error";
 import Home from "./routes/Home";
+*/
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+  },
+]);
+/* progress form in class
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +31,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+*/
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
