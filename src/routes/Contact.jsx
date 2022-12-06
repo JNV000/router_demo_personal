@@ -1,5 +1,4 @@
 import { Form } from "react-router-dom";
-import Favorite from "../components/Favorite";
 
 export default function Contact() {
   const contact = {
@@ -12,7 +11,7 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="pt-1">
+    <div id="contact">
       <div>
         <img key={contact.avatar} src={contact.avatar || null} />
       </div>
@@ -57,5 +56,21 @@ export default function Contact() {
         </div>
       </div>
     </div>
+  );
+}
+
+function Favorite({ contact }) {
+  // yes, this is a `let` for later
+  let favorite = contact.favorite;
+  return (
+    <Form method="post">
+      <button
+        name="favorite"
+        value={favorite ? "false" : "true"}
+        aria-label={favorite ? "Remove from favorites" : "Add to favorites"}
+      >
+        {favorite ? "★" : "☆"}
+      </button>
+    </Form>
   );
 }

@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import "./index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
+import Contact from "./routes/contact";
 /*
 import Contact from "./routes/Contact";
 import Error from "./routes/Error";
@@ -16,6 +17,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "contacts/:contactId",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 // Note: default tailwind styles seem to have messed with intended look of the CSS
