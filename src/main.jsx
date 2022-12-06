@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 // import App from "./App";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import "./index.css";
-
 import Root from "./routes/root";
+import ErrorPage from "./error-page";
 /*
 import Contact from "./routes/Contact";
 import Error from "./routes/Error";
@@ -15,8 +15,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
   },
 ]);
+// Note: default tailwind styles seem to have messed with intended look of the CSS
+
 /* progress form in class
 const router = createBrowserRouter([
   {
