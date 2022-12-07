@@ -58,7 +58,7 @@ export default function Contact() {
 }
 
 /*
-Note: the form action edits adds /edit to the end of the url, giving us the url: contacts/:contactId/edit, which is the edit route.
+Note: the form action edit adds /edit to the end of the url, giving us the url: contacts/:contactId/edit, which is the edit route.
 */
 
 function Favorite({ contact }) {
