@@ -4,6 +4,7 @@ import { getContact } from "../contacts";
 export async function loader({ params }) {
   return getContact(params.contactId);
 }
+// API request
 
 export default function Contact() {
   const contact = useLoaderData();

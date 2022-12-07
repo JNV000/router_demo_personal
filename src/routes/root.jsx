@@ -4,11 +4,13 @@ import { getContacts, createContact } from "../contacts";
 export async function action() {
   await createContact();
 }
+// API request/create
 
 export async function loader() {
   const contacts = await getContacts();
   return { contacts };
 }
+// 'fetch' or make API request
 
 export default function Root() {
   const { contacts } = useLoaderData();
